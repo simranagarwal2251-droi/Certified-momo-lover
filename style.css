@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fff8ed;
+  color: #281c18;
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.app {
+  width: min(100%, 680px);
+  margin: auto;
+  padding: 30px 20px 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.screen {
+  display: none;
+  min-height: calc(100vh - 120px);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.momo,
+.result-momo {
+  font-size: 82px;
+  line-height: 1;
+  margin-bottom: 22px;
+  filter: drop-shadow(0 8px 10px rgba(201, 72, 63, 0.15));
+}
+
+.eyebrow {
+  color: #c9483f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(46px, 11vw, 76px);
+  line-height: .95;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  color: #c9483f;
+}
+
+.intro {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 28px 0 8px;
+}
+
+.subintro {
+  max-width: 430px;
+  color: #806f66;
+  line-height: 1.6;
+  margin: 0 auto 28px;
+}
+
+.tiny {
+  color: #a6978e;
+  font-size: 11px;
+  margin-top: 15px;
+}
+
+.primary {
+  border: 0;
+  border-radius: 999px;
+  padding: 16px 26px;
+  background: #c9483f;
+  color: white;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(201, 72, 63, .22);
+  transition: .2s ease;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+}
+
+.primary:active {
+  transform: scale(.98);
+}
+
+.primary span {
+  margin-left: 10px;
+}
+
+.primary:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.secondary {
+  border: 1px solid #d9c6ba;
+  border-radius: 999px;
+  padding: 14px 24px;
+  background: white;
+  color: #281c18;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text-btn {
+  border: 0;
+  background: transparent;
+  color: #806f66;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.quiz-top {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.quiz-top > span {
+  display: block;
+  text-align: left;
+  color: #806f66;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.progress {
+  height: 7px;
+  background: #eadbd0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+#progressBar {
+  width: 10%;
+  height: 100%;
+  background: #c9483f;
+  border-radius: inherit;
+  transition: width .3s ease;
+}
+
+.question-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #eadbd0;
+  border-radius: 28px;
+  padding: 35px 25px;
+  box-shadow: 0 15px 45px rgba(80, 45, 30, .07);
+}
+
+.question-emoji {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(26px, 6vw, 38px);
+  line-height: 1.15;
+  margin: 0 auto 28px;
+  max-width: 540px;
+}
+
+.answers {
+  display: grid;
+  gap: 12px;
+}
+
+.answer {
+  width: 100%;
+  border: 1px solid #e5d5ca;
+  border-radius: 16px;
+  padding: 15px 17px;
+  background: #fffaf5;
+  color: #3a2b25;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+ 
